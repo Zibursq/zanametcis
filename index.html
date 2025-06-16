@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Entregadores e Motoristas - Entregas Shoppe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#ee4d2d">
+    <meta name="msapplication-TileColor" content="#ee4d2d">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body> <header class="hero">
+        <div class="hero-content">
+            <img src="imagem_2025-06-09_222525774-Photoroom.png" alt="Logo da Entregas Shoppe" class="logo">
+            <h1>Sua Próxima Oportunidade de Frete Começa Aqui!</h1>
+            <p>Cansado de procurar por oportunidades? Chegou a sua chance de conseguir os melhores fretes e garantir uma renda extra (ou principal!). Estamos expandindo nossa equipe e buscando entregadores e motoristas dedicados para fazer a diferença em nossas entregas, **seja de moto, carro ou qualquer outro veículo**.</p>
+            <a href="#cadastro-form" class="btn-cta">Quero Me Cadastrar Agora!</a>
+        </div>
+    </header>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>Por Que Se Tornar um Entregador Entregas Shoppe?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Ganhos Competitivos e Pontuais</h3>
+                    <p>Receba seu valor justo e em dia, com oportunidades para aumentar sua renda.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexibilidade Total de Horários</h3>
+                    <p>Você decide quando e quanto quer trabalhar, adaptando-se à sua rotina.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>Suporte Dedicado ao Parceiro</h3>
+                    <p>Nossa equipe está sempre pronta para oferecer o suporte que você precisa.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Grande Volume de Entregas</h3>
+                    <p>Conte com uma alta demanda de fretes para maximizar seus ganhos.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Tecnologia Intuitiva</h3>
+                    <p>Receba e gerencie suas entregas de forma prática e eficiente pelo aplicativo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="who-we-look">
+        <div class="container">
+            <h2>Quem Buscamos?</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Entregadores e motoristas com **veículo próprio (moto, carro, utilitário, etc.)**.</li>
+                <li><i class="fas fa-check-circle"></i> Documentação do veículo e CNH em dia.</li>
+                <li><i class="fas fa-check-circle"></i> Celular com acesso à internet.</li>
+                <li><i class="fas fa-check-circle"></i> Comprometimento, responsabilidade e pró-atividade.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="form-section" id="cadastro-form">
+        <div class="container">
+            <h2>Inicie Seu Cadastro Agora!</h2>
+            <p class="subtitle">Preencha o formulário abaixo com seus dados. É o primeiro passo rápido e fácil para você se juntar à nossa equipe de sucesso e começar a rodar!</p>
+
+            <form id="driverForm">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="000.000.000-00" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone (WhatsApp):</label>
+                    <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s?\d{4,5}-?\d{4}" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço Completo:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoVeiculo">Tipo de Veículo:</label>
+                    <select id="tipoVeiculo" name="tipoVeiculo" required>
+                        <option value="">Selecione o tipo de veículo</option>
+                        <option value="moto">Moto</option>
+                        <option value="carro">Carro</option>
+                        <option value="utilitario">Utilitário (Van/Furgão)</option>
+                        <option value="outro">Outro (especificar)</option>
+                    </select>
+                </div>
+                <div class="form-group" id="outroVeiculoGroup" style="display: none;">
+                    <label for="outroVeiculo">Qual veículo?</label>
+                    <input type="text" id="outroVeiculo" name="outroVeiculo">
+                </div>
+
+                <div class="form-group">
+                    <label for="modeloVeiculo">Modelo do Veículo:</label>
+                    <input type="text" id="modeloVeiculo" name="modeloVeiculo" required>
+                </div>
+                <div class="form-group">
+                    <label for="placaVeiculo">Placa do Veículo:</label>
+                    <input type="text" id="placaVeiculo" name="placaVeiculo" pattern="[A-Za-z]{3}\-?\d{4}|[A-Za-z]{3}\d[A-Za-z]\d{2}" placeholder="ABC-1234 ou ABC1D23" required>
+                </div>
+                <div class="form-group">
+                    <label for="cnhCategoria">Possui CNH Categoria:</label>
+                    <select id="cnhCategoria" name="cnhCategoria" required>
+                        <option value="">Selecione a categoria</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="ear" name="ear">
+                    <label for="ear">Possui EAR (Exerce Atividade Remunerada) na CNH?</label>
+                </div>
+                <div class="form-group">
+                    <label for="tempoExperiencia">Tempo de Experiência como Entregador/Motorista:</label>
+                    <select id="tempoExperiencia" name="tempoExperiencia" required>
+                        <option value="">Selecione a experiência</option>
+                        <option value="menos-1-ano">Menos de 1 ano</option>
+                        <option value="1-3-anos">1-3 anos</option>
+                        <option value="mais-3-anos">Mais de 3 anos</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="disponibilidade">Disponibilidade de Horário:</label>
+                    <select id="disponibilidade" name="disponibilidade" required>
+                        <option value="">Selecione a disponibilidade</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                        <option value="integral">Integral</option>
+                        <option value="fins-de-semana">Fins de Semana</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comoConheceu">Como nos conheceu? (Opcional)</label>
+                    <input type="text" id="comoConheceu" name="comoConheceu">
+                </div>
+                
+                <div class="document-upload">
+                    <h3>Anexe Seus Documentos (Opcional, mas agiliza o processo!)</h3>
+                    <p class="upload-tip"><i class="fas fa-info-circle"></i> Aceitamos arquivos nos formatos PDF ou imagem (JPG, PNG). Tamanho máximo: 5MB por arquivo.</p>
+                    <div class="upload-group">
+                        <label for="uploadCnh" class="btn-upload"><i class="fas fa-upload"></i> Upload CNH</label>
+                        <input type="file" id="uploadCnh" name="uploadCnh" accept=".pdf, .jpg, .jpeg, .png">
+                        <span id="fileCnhName" class="file-name">Nenhum arquivo selecionado</span>
+                    </div>
+                    <div class="upload-group">
+                        <label for="uploadCrlv" class="btn-upload"><i class="fas fa-upload"></i> Upload CRLV (Doc. Veículo)</label>
+                        <input type="file" id="uploadCrlv" name="uploadCrlv" accept=".pdf, .jpg, .jpeg, .png">
+                        <span id="fileCrlvName" class="file-name">Nenhum arquivo selecionado</span>
+                    </div>
+                    <div class="upload-group">
+                        <label for="uploadComprovante" class="btn-upload"><i class="fas fa-upload"></i> Upload Comprovante de Residência</label>
+                        <input type="file" id="uploadComprovante" name="uploadComprovante" accept=".pdf, .jpg, .jpeg, .png">
+                        <span id="fileComprovanteName" class="file-name">Nenhum arquivo selecionado</span>
+                    </div>
+                </div>
+
+                <div class="payment-info">
+                    <h3><i class="fas fa-money-check-alt"></i> Taxa de Ativação de Cadastro</h3>
+                    <p>Para garantir a qualidade de nossa plataforma e oferecer o melhor suporte e volume de entregas, aplicamos uma **taxa única de ativação de cadastro** no valor de <span class="taxa-valor">R$ 149,90</span>.</p>
+                    <p>Essa taxa cobre:</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> **Processamento e Validação:** Agilidade na sua entrada em nossa base de entregadores parceiros.</li>
+                        <li><i class="fas fa-check-circle"></i> **Acesso à Plataforma:** Tenha acesso exclusivo ao nosso sistema de chamados com os melhores fretes.</li>
+                        <li><i class="fas fa-check-circle"></i> **Suporte Prioritário:** Conte com atendimento rápido e dedicado para todas as suas necessidades.</li>
+                    </ul>
+                    <p class="payment-warning">Ao clicar em "Enviar Cadastro", seus dados serão registrados em nosso sistema. Para ativar seu cadastro e realizar o pagamento da taxa, **será necessário entrar em contato conosco via WhatsApp** após o envio do formulário. Nossa equipe está pronta para guiá-lo(a)!</p>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Cadastro e Falar no WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Dúvidas? Fale Conosco!</h2>
+            <p>Estamos à disposição para ajudar você a tirar todas as suas dúvidas sobre o cadastro e as oportunidades!</p>
+            <p><i class="fab fa-whatsapp"></i> **WhatsApp:** (11) 91186-9145</p>
+            <p><i class="fas fa-envelope"></i> **E-mail:** shoppe@entregas.com.br</p>
+            <p class="contact-note">Nosso horário de atendimento é de Segunda a Sexta, das 8h às 22h.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Entregas Shoppe. Todos os direitos reservados.</p>
+            <p><a href="politica-privacidade.html">Política de Privacidade</a> | <a href="termos-uso.html">Termos de Uso</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-check-circle modal-icon"></i>
+                <h2>Cadastro Enviado com Sucesso!</h2>
+                <p>Seus dados foram registrados e pré-preenchidos em uma mensagem no WhatsApp para sua comodidade.</p>
+                <p>Para ativar seu cadastro e realizar o pagamento da taxa de **R$ 149,90**, **clique no botão abaixo** e finalize o envio da mensagem para nossa equipe.</p>
+                <button id="whatsappRedirectBtn" class="btn-whatsapp-modal">
+                    <i class="fab fa-whatsapp"></i> Ir para o WhatsApp
+                </button>
+                <p class="modal-footer-text">Nossa equipe está pronta para guiá-lo(a) pelo processo de pagamento.</p>
+            </div>
+        </div>
+    </div>
+</body> </html> ```
+

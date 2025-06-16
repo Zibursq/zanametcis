@@ -1,0 +1,610 @@
+/* Geral */
+:root {
+    --primary-color: #EE4D2D; /* Laranja Shopee vibrante */
+    --secondary-color: #FF7D00; /* Um laranja um pouco diferente para destaque secundário */
+    --text-color: #333;
+    --light-bg: #f8f8f8; /* Fundo mais claro, quase branco */
+    --dark-bg: #4a4a4a; /* Cinza escuro para títulos e textos principais */
+    --white: #fff;
+    --gray-light: #f3f3f3; /* Cinza bem claro para backgrounds de seções/formulário */
+    --button-hover-color: #D33D21; /* Laranja mais escuro para hover */
+    --info-bg: #fff3e0; /* Laranja clarinho para caixas de informação */
+    --info-border: #ffcc80; /* Borda da caixa de informação */
+    --info-text: #e65100; /* Texto mais escuro para info */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--dark-bg);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botões */
+.btn-cta, .btn-submit {
+    display: inline-block;
+    background-color: var(--primary-color); /* Laranja Shopee */
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sutil sombra para destaque */
+}
+
+.btn-cta:hover, .btn-submit:hover {
+    background-color: var(--button-hover-color); /* Laranja mais escuro */
+}
+
+.btn-upload {
+    display: inline-block;
+    background-color: var(--secondary-color); /* Laranja um pouco diferente */
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.95em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-upload:hover {
+    background-color: #e66b00; /* Hover para o secundário */
+}
+
+/* Hero Section */
+.hero {
+    /* Mantenha o background com a imagem para um visual rico */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background-entrega.jpg') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero .logo {
+    width: 180px; /* Aumentado um pouco o tamanho da logo */
+    margin-bottom: 30px;
+    filter: brightness(0) invert(1); /* Para logos claras em fundo escuro */
+}
+
+.hero h1 {
+    font-size: 3.2em; /* Fonte um pouco maior */
+    margin-bottom: 20px;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sutil sombra no texto do hero */
+}
+
+.hero p {
+    font-size: 1.25em; /* Fonte um pouco maior */
+    margin-bottom: 40px;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 60px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.benefits h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.benefit-item {
+    background-color: var(--gray-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para sombra também */
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-item i {
+    font-size: 3.2em; /* Ícone um pouco maior */
+    color: var(--primary-color); /* Laranja Shopee */
+    margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+    font-size: 1.5em; /* Título um pouco maior */
+    color: var(--primary-color); /* Laranja Shopee */
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    font-size: 1em; /* Ajuste para melhor legibilidade */
+    color: #555;
+}
+
+/* Who We Look Section */
+.who-we-look {
+    padding: 60px 0;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.who-we-look h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.who-we-look ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.who-we-look li {
+    font-size: 1.1em;
+    margin-bottom: 12px; /* Espaçamento maior entre itens */
+    padding-left: 30px;
+    position: relative;
+}
+
+.who-we-look li i {
+    color: var(--primary-color); /* Laranja Shopee para o checkmark */
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+/* Form Section */
+.form-section {
+    padding: 60px 0;
+    background-color: var(--white);
+}
+
+.form-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.form-section .subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+form {
+    background-color: var(--gray-light);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-bg);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+    width: calc(100% - 24px); /* Ajustado para considerar padding */
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+    border-color: var(--primary-color); /* Laranja Shopee */
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(238, 77, 45, 0.25); /* Sombra de foco com cor da Shopee */
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    padding-left: 5px; /* Ajuste para alinhar com inputs */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Aumenta o tamanho do checkbox */
+    accent-color: var(--primary-color); /* Cor do checkbox (modern browsers) */
+}
+
+/* Document Upload */
+.document-upload {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #dee2e6;
+}
+
+.document-upload h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--dark-bg);
+}
+
+.document-upload .upload-tip {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.upload-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.upload-group input[type="file"] {
+    display: none; /* Esconde o input file padrão */
+}
+
+.upload-group .file-name {
+    font-size: 0.9em;
+    color: #555;
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Payment Info */
+.payment-info {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: var(--info-bg); /* Laranja clarinho */
+    border: 1px solid var(--info-border); /* Borda laranja */
+    border-radius: 8px;
+    text-align: center;
+    color: var(--info-text); /* Texto laranja escuro */
+}
+
+.payment-info h3 {
+    color: var(--info-text); /* Laranja escuro */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.payment-info h3 i {
+    margin-right: 10px;
+    color: var(--primary-color); /* Laranja Shopee */
+}
+
+.payment-info p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.payment-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+.payment-info ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1em;
+}
+
+.payment-info ul li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--primary-color); /* Laranja Shopee para o checkmark */
+}
+
+.payment-info .taxa-valor {
+    font-weight: 700;
+    color: var(--primary-color); /* Cor de destaque para o valor da taxa (Laranja Shopee) */
+    font-size: 1.3em;
+}
+
+.payment-info .payment-warning {
+    font-size: 0.95em; /* Ligeiramente maior para legibilidade */
+    color: #666; /* Cinza mais neutro para o warning */
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 0;
+    background-color: var(--dark-bg); /* Cinza escuro */
+    color: var(--white);
+    text-align: center;
+}
+
+.contact h2 {
+    color: var(--white);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.contact i {
+    margin-right: 10px;
+    color: var(--primary-color); /* Laranja Shopee */
+}
+
+.contact .contact-note {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2a2a2a; /* Um pouco mais escuro */
+    color: #b0b0b0;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #b0b0b0;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item {
+        margin-bottom: 20px;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="date"],
+    .form-group select {
+        width: calc(100% - 24px); /* Ajuste para padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .btn-cta, .btn-submit {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .hero .logo {
+        width: 120px;
+    }
+}
+
+/* Estilos da Modal de Sucesso Customizada */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica por cima de tudo */
+    z-index: 1000; /* Alto z-index para garantir que esteja na frente */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita scroll se o conteúdo for muito grande */
+    background-color: rgba(0,0,0,0.7); /* Fundo semi-transparente escuro */
+    display: flex; /* Usar flexbox para centralizar */
+    align-items: center; /* Centralizar verticalmente */
+    justify-content: center; /* Centralizar horizontalmente */
+    opacity: 0; /* Começa invisível para animação */
+    visibility: hidden; /* Escondido para leitores de tela */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: auto; /* Centraliza a caixa da modal */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    max-width: 500px; /* Largura máxima da modal */
+    width: 90%; /* Ocupa 90% da largura disponível */
+    text-align: center;
+    position: relative;
+    transform: translateY(-50px); /* Começa um pouco acima para animação */
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0); /* Desliza para a posição final */
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color); /* Laranja Shopee */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-icon {
+    font-size: 4em; /* Tamanho grande para o ícone */
+    color: var(--secondary-color); /* Verde ou um laranja vibrante */
+    margin-bottom: 20px;
+}
+
+.modal-content h2 {
+    color: var(--dark-bg);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-content .taxa-valor {
+    color: var(--primary-color); /* Laranja Shopee */
+    font-weight: 700;
+}
+
+.btn-whatsapp-modal {
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-whatsapp-modal i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.btn-whatsapp-modal:hover {
+    background-color: #1DA851; /* Verde WhatsApp mais escuro */
+    transform: translateY(-2px);
+}
+
+.modal-footer-text {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 25px;
+}
+
+/* Responsividade da modal */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+    .modal-icon {
+        font-size: 3em;
+    }
+    .modal-content h2 {
+        font-size: 1.6em;
+    }
+    .modal-content p {
+        font-size: 1em;
+    }
+    .btn-whatsapp-modal {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
